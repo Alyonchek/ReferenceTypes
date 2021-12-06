@@ -6,20 +6,19 @@ namespace Task_5
     {
         static void Main(string[] args)
         {
-            Line line = new Line(0, 0, 2, 2);
-            Console.WriteLine(line.Draw());
+          List<Figure> FigureList= new List<Figure>(); 
+            
+            FigureList.Add(new Line(0, 0, 2, 2));
 
-            Circle circle = new Circle(1, 1, 5);
-            Console.WriteLine(circle.Draw());
+            FigureList.Add(new Circle(1, 1, 5));
 
-            Round round = new Round(1, 1, 5, "Красный") ;
-            Console.WriteLine(round.Draw());
+            FigureList.Add(new Round(1, 1, 5, "Красный"));
+            FigureList.Add( new Rectangle(12, 10, 34, 15, 34, 12));
 
-            Rectangle rectange = new Rectangle(12,10,34,15,34,12);
-            Console.WriteLine(rectange.Draw());
+            FigureList.Add(new Ring(5, 5, 5, "Красный", 2, 2, 2, "Белый"));
 
-            Ring ring = new Ring(5, 5, 5, "Красный",2,2,2,"Белый");
-            Console.WriteLine(ring.Draw());
+            foreach (Figure Ring in FigureList)
+                Console.WriteLine(Ring.Draw());
 
         }
     }
